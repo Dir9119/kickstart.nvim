@@ -822,6 +822,7 @@ require('lazy').setup({
     init = function()
       vim.opt.termguicolors = true
       vim.opt.background = 'dark'
+      --vim.g.gruvbox_material_enable_italic = true
       vim.cmd.colorscheme 'gruvbox-material'
     end,
   },
