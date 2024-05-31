@@ -803,13 +803,26 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
+      --vim.cmd.colorscheme 'tokyonight-night'
 
       -- You can configure highlights by doing something like:
-      vim.cmd.hi 'Comment gui=none'
+      --vim.cmd.hi 'Comment gui=none'
     end,
   },
-
+  -- Popular colorschemes
+  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+  { 'rebelot/kanagawa.nvim', name = 'kanagawa' },
+  { 'EdenEast/nightfox.nvim', name = 'nightfox' },
+  { 'navarasu/onedark.nvim', name = 'onedark' },
+  {
+    'sainnhe/gruvbox-material',
+    name = 'gruvbox-material',
+    init = function()
+      vim.opt.termguicolors = true
+      vim.opt.background = 'dark'
+      vim.cmd.colorscheme 'gruvbox-material'
+    end,
+  },
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
